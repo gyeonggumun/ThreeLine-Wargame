@@ -1,0 +1,258 @@
+{
+  "method": "Read-only OVA / streamOptimized VMDK / GPT / ext4 inspection; guest not booted",
+  "appliance": {
+    "guest_os": "Ubuntu 24.04.4 LTS",
+    "vcpus": 1,
+    "memory_mb": 2048,
+    "disk_capacity_bytes": 10737418240,
+    "network_mode": "Bridged",
+    "manifest_sha1": {
+      "ovf_matches": true,
+      "vmdk_matches": true
+    }
+  },
+  "files": [
+    {
+      "path": "/etc/systemd/system/wargame.service",
+      "mode": "0644",
+      "uid": 0,
+      "gid": 0,
+      "repository_path": "reference/systemd/wargame.service",
+      "sha256_original": "c148040e8cc8081cb72a147b54030f1908847d0c6829ec8360883485f9d30607",
+      "sha256_published": "c148040e8cc8081cb72a147b54030f1908847d0c6829ec8360883485f9d30607",
+      "redacted": false
+    },
+    {
+      "path": "/etc/systemd/system/hidden-archive.service",
+      "mode": "0644",
+      "uid": 0,
+      "gid": 0,
+      "repository_path": "reference/systemd/hidden-archive.service",
+      "sha256_original": "3d6351f36bc2dc05ed501b5ea1a372c80841843959bcc5de73bc930f11d0a3ba",
+      "sha256_published": "3d6351f36bc2dc05ed501b5ea1a372c80841843959bcc5de73bc930f11d0a3ba",
+      "redacted": false
+    },
+    {
+      "path": "/etc/apache2/sites-available/000-default.conf",
+      "mode": "0644",
+      "uid": 0,
+      "gid": 0,
+      "repository_path": "reference/apache/000-default.conf",
+      "sha256_original": "7ce9172dac10bc8e045c81447343056811a0d7fb1897603b51328a22da47172a",
+      "sha256_published": "7ce9172dac10bc8e045c81447343056811a0d7fb1897603b51328a22da47172a",
+      "redacted": false
+    },
+    {
+      "path": "/etc/ufw/ufw.conf",
+      "mode": "0644",
+      "uid": 0,
+      "gid": 0,
+      "repository_path": "reference/ufw/ufw.conf",
+      "sha256_original": "254cb3ad232ca318498ed64ffaee96e2659e0e67228602b644b6357cd26c7e58",
+      "sha256_published": "254cb3ad232ca318498ed64ffaee96e2659e0e67228602b644b6357cd26c7e58",
+      "redacted": false
+    },
+    {
+      "path": "/etc/default/ufw",
+      "mode": "0644",
+      "uid": 0,
+      "gid": 0,
+      "repository_path": "reference/ufw/defaults.conf",
+      "sha256_original": "07db07bb07e5ac1388707b7c59dabfbce8ad06d5001236248fbf3f93b79c2ed7",
+      "sha256_published": "07db07bb07e5ac1388707b7c59dabfbce8ad06d5001236248fbf3f93b79c2ed7",
+      "redacted": false
+    },
+    {
+      "path": "/etc/ufw/user.rules",
+      "mode": "0640",
+      "uid": 0,
+      "gid": 0,
+      "repository_path": "reference/ufw/user.rules",
+      "sha256_original": "16911b3cceb8112aae37be68eaca49dd002d5109e014cacf5b13fce4708a9455",
+      "sha256_published": "16911b3cceb8112aae37be68eaca49dd002d5109e014cacf5b13fce4708a9455",
+      "redacted": false
+    },
+    {
+      "path": "/etc/ufw/user6.rules",
+      "mode": "0640",
+      "uid": 0,
+      "gid": 0,
+      "repository_path": "reference/ufw/user6.rules",
+      "sha256_original": "8c4703354a96b1dd3b5c52dddfd8aa058f4a956a25ac3e47026e7c2190472180",
+      "sha256_published": "8c4703354a96b1dd3b5c52dddfd8aa058f4a956a25ac3e47026e7c2190472180",
+      "redacted": false
+    },
+    {
+      "path": "/var/www/wargame/templates/ch1.html",
+      "mode": "0600",
+      "uid": 999,
+      "gid": 988,
+      "repository_path": "reference/web/templates/ch1.html",
+      "sha256_original": "f0653ddff56c457c851a6ed994261551203763a9ec86d40b672cd21dcf34f4cc",
+      "sha256_published": "f0653ddff56c457c851a6ed994261551203763a9ec86d40b672cd21dcf34f4cc",
+      "redacted": false
+    },
+    {
+      "path": "/var/www/wargame/templates/ch2.html",
+      "mode": "0600",
+      "uid": 999,
+      "gid": 988,
+      "repository_path": "reference/web/templates/ch2.html",
+      "sha256_original": "f59df9c34d39ef86f760bf96684444ee9b9b86f86b1adbf3d1904044eb4e8818",
+      "sha256_published": "f59df9c34d39ef86f760bf96684444ee9b9b86f86b1adbf3d1904044eb4e8818",
+      "redacted": false
+    },
+    {
+      "path": "/var/www/wargame/app.py",
+      "mode": "0600",
+      "uid": 999,
+      "gid": 988,
+      "repository_path": "reference/web/app.sanitized.py",
+      "sha256_original": "fe9bfb6f94ef17e5880cf02390f6b72966e8e4d02a8341a14c540972db700e26",
+      "sha256_published": "bc3f53c1831499c4477412d03da89be4454afeacbac84cd78a9ba5fb2b858eb7",
+      "redacted": true,
+      "change": "DB_CONFIG password replaced with a placeholder; other code preserved"
+    }
+  ],
+  "permissions": [
+    {
+      "path": "/var/www/wargame",
+      "mode": "0700",
+      "uid": 999,
+      "gid": 988
+    },
+    {
+      "path": "/var/www/wargame/app.py",
+      "mode": "0600",
+      "uid": 999,
+      "gid": 988
+    },
+    {
+      "path": "/var/www/hidden-archive",
+      "mode": "0750",
+      "uid": 996,
+      "gid": 987
+    },
+    {
+      "path": "/var/www/hidden-archive/app.py",
+      "mode": "0640",
+      "uid": 996,
+      "gid": 987
+    },
+    {
+      "path": "/var/www/hidden-archive/secret",
+      "mode": "0750",
+      "uid": 996,
+      "gid": 987
+    },
+    {
+      "path": "/var/www/hidden-archive/secret/flag2.txt",
+      "mode": "0640",
+      "uid": 996,
+      "gid": 987
+    },
+    {
+      "path": "/etc/ch2_flag.txt",
+      "mode": "0777",
+      "uid": 0,
+      "gid": 988
+    },
+    {
+      "path": "/etc/wargame-progress/secret.key",
+      "mode": "0640",
+      "uid": 0,
+      "gid": 1001
+    },
+    {
+      "path": "/var/www/html/wargame",
+      "mode": "0775",
+      "uid": 1000,
+      "gid": 33
+    },
+    {
+      "path": "/var/www/html/internal-system",
+      "mode": "0755",
+      "uid": 1000,
+      "gid": 1000
+    }
+  ],
+  "service_accounts": [
+    {
+      "name": "www-data",
+      "uid": 33,
+      "gid": 33,
+      "shell": "/usr/sbin/nologin"
+    },
+    {
+      "name": "mysql",
+      "uid": 111,
+      "gid": 111,
+      "shell": "/bin/false"
+    },
+    {
+      "name": "wargame",
+      "uid": 999,
+      "gid": 988,
+      "shell": "/usr/sbin/nologin"
+    },
+    {
+      "name": "hiddenarchive",
+      "uid": 996,
+      "gid": 987,
+      "shell": "/usr/sbin/nologin"
+    }
+  ],
+  "shared_progress_group": [
+    {
+      "name": "wargame-progress",
+      "gid": 1001,
+      "members": [
+        "www-data",
+        "wargame",
+        "hiddenarchive"
+      ]
+    }
+  ],
+  "ssh": {
+    "main_active_directives": [
+      "Include /etc/ssh/sshd_config.d/*.conf",
+      "KbdInteractiveAuthentication no",
+      "UsePAM yes",
+      "X11Forwarding yes",
+      "PrintMotd no",
+      "AcceptEnv LANG LC_*",
+      "Subsystem\tsftp\t/usr/lib/openssh/sftp-server"
+    ],
+    "included_50_cloud_init": "PasswordAuthentication yes"
+  },
+  "source_spans": {
+    "mark_progress": {
+      "start_line": 39,
+      "end_line": 119
+    },
+    "index": {
+      "start_line": 127,
+      "end_line": 130
+    },
+    "ch1_page": {
+      "start_line": 139,
+      "end_line": 142
+    },
+    "ch1_login": {
+      "start_line": 149,
+      "end_line": 227
+    },
+    "ch2_page": {
+      "start_line": 236,
+      "end_line": 247
+    },
+    "ch2_webhook": {
+      "start_line": 254,
+      "end_line": 359
+    }
+  },
+  "limitations": [
+    "No live firewall, sshd effective configuration, service or exploit execution",
+    "No complete OS policy audit; static settings do not prove complete isolation"
+  ]
+}
