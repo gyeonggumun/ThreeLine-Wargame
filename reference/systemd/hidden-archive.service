@@ -1,0 +1,25 @@
+[Unit]
+Description=Hidden Archive Wargame Flask Application
+After=network.target
+
+[Service]
+Type=simple
+
+User=hiddenarchive
+Group=hiddenarchive
+
+WorkingDirectory=/var/www/hidden-archive
+
+Environment="PATH=/var/www/hidden-archive/venv/bin"
+Environment="PYTHONUNBUFFERED=1"
+
+ExecStart=/var/www/hidden-archive/venv/bin/python /var/www/hidden-archive/app.py
+
+Restart=on-failure
+RestartSec=3
+
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

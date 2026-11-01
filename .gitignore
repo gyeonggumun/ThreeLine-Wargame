@@ -1,0 +1,26 @@
+# 원본 VM과 전달 자료
+*.ova
+*.ovf
+*.vmdk
+*.vdi
+*.mf
+*.zip
+*.pdf
+
+# 비밀정보와 실습 데이터
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.db
+*.sqlite*
+*flag*.txt
+*.sql
+
+# 로컬 실행·분석 산출물
+venv/
+.venv/
+__pycache__/
+*.pyc
+tmp/

@@ -1,0 +1,27 @@
+[Unit]
+Description=Combined Wargame Flask Application
+After=network.target mariadb.service
+Requires=mariadb.service
+
+[Service]
+Type=simple
+
+User=wargame
+Group=wargame
+
+WorkingDirectory=/var/www/wargame
+
+Environment="PATH=/var/www/wargame/venv/bin"
+Environment="PYTHONUNBUFFERED=1"
+
+ExecStart=/var/www/wargame/venv/bin/python \
+/var/www/wargame/app.py
+
+Restart=on-failure
+RestartSec=3
+
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
